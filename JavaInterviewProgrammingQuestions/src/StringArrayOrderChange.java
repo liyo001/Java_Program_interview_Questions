@@ -4,8 +4,10 @@ public class StringArrayOrderChange {
 
 	public static void main(String[] args) {
 
-		String[] countries = { "Zimbabwe", "South-Africa", "India", "America", "Yugoslavia", " Australia", "Denmark",
-				"France", "Netherlands", "Italy", "Germany" };
+//		String[] countries = { "Zimbabwe", "South-Africa", "India", "America", "Yugoslavia", " Australia", "Denmark",
+//				"France", "Netherlands", "Italy", "Germany" };
+		
+		String[] countries= {"90","12","0","-8","40"};
 
 		int size = countries.length;
 
@@ -16,7 +18,7 @@ public class StringArrayOrderChange {
 
 			{
 
-				if (countries[i].compareTo(countries[j]) < 0)
+				if (countries[i].compareTo(countries[j]) > 0)
 
 				{
 					temp = countries[i];

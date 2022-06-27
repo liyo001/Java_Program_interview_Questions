@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class ArraySort {
 
@@ -7,20 +8,11 @@ public class ArraySort {
 		int temp;
 
 		int[] str = { 90, -78, 56, 0, 12 };
-		
-		
 
 		for (int i = 0; i < str.length; i++)
 
 		{
-
-			System.out.print(str[i]);
-		}
-
-		for (int i = 0; i < str.length; i++)
-
-		{
-			for (int j = i; j < str.length; j++)
+			for (int j = i+1; j < str.length; j++)
 
 			{
 
@@ -34,17 +26,8 @@ public class ArraySort {
 			}
 
 		}
-
-		for (int i = 0; i < str.length; i++)
-
-		{
-
-			System.out.println(str[i]);
-		}
+		System.out.print(Arrays.toString(str));}
 
 	}
-
-}
-
 
 //Note
