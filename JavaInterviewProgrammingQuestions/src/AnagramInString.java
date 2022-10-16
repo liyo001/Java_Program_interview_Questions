@@ -7,7 +7,6 @@ public class AnagramInString {
 
 		String str1 = "java2blog";
 		String str2 = "aj2vabgol";
-		int i=0;
 
 		int len1 = str1.length();
 		int len2 = str2.length();
