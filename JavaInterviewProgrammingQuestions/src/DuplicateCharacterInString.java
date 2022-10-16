@@ -59,8 +59,8 @@ public class DuplicateCharacterInString {
 //	Set<Character> keys = map.keySet();
 //	
 //	for(Character ch1:keys){
-//	      if(map.get(ch) > 1){
-//	        System.out.println("Char "+ch+" "+map.get(ch));
+//	      if(map.get(ch1) > 1){
+//	        System.out.println("Char "+ch1+" "+map.get(ch1));
 //	      }
 //	    }
 //

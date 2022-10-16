@@ -21,6 +21,8 @@ public class RemoveCharacterFromFirstStringPresentInSecondString {
 		}
 
 		System.out.print(str2);
+		
+		
+	}
 	}
 
-}
