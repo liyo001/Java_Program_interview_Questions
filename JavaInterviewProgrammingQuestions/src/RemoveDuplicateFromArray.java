@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,16 +24,24 @@ public class RemoveDuplicateFromArray {
 		arr[j] = arr[n - 1];
 
 		for (int i = 0; i < j + 1; i++) {
-			System.out.println(arr[i]);
+			System.out.print(arr[i]+" ");
 
 		}
 
 		// Using Stream of java 8
-//		List<Integer> list= Arrays.asList(arr).stream().distinct().collect(Collectors.toList());
-//		
-//		System.out.println(list);
+		Object [] at=Arrays.asList(arr).stream().distinct().toArray();
+
+		System.out.print(Arrays.toString(at));
 		
 		//Using hashset also we can remove the deuplicate array.
+
+		HashSet<Integer> set= new HashSet<>();
+
+		for(Integer yt : arr)
+		{
+			set.add(yt);
+		}
+		System.out.println(set);
 
 	}
 

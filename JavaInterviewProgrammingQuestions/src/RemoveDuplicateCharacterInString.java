@@ -1,22 +1,21 @@
+import java.util.HashSet;
 
 public class RemoveDuplicateCharacterInString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//
-//		String str = "JavaTpoint is the best learning website";
-//
-//		String newStr = new String();
-//
-//		for (int i = 0; i < str.length(); i++) {
-//			char charAtPosition = str.charAt(i);
-//
-//			if (newStr.indexOf(charAtPosition) < 0) {
-//				newStr = newStr + charAtPosition;
-//			}
-//		}
-//
-//		System.out.print(newStr);
+		String str = "Java bast bast learning Java website Point";
+
+		String []arr= str.split(" ");
+
+		String updateStr= new String();
+		HashSet<String> set= new HashSet<>();
+		for(String yt: arr)
+		{
+			if(set.add(yt))
+				updateStr= updateStr+" "+yt;
+		}
+			System.out.println(updateStr);
 		
 		// Remove duplicate words from string.
 
@@ -35,6 +34,9 @@ public class RemoveDuplicateCharacterInString {
 		}
 
 		System.out.println(newStr1);
+
+
+
 
 	}
 

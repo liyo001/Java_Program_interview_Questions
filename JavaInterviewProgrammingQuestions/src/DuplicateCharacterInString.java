@@ -1,9 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class DuplicateCharacterInString {
 
@@ -21,48 +16,45 @@ public class DuplicateCharacterInString {
 				System.out.print(ch);
 			} else {
 				set.add(ch);
-				
 			}
 
 		}
-		
-		
+
+//		// Using Hashmap
 //		Iterator<Character> namesIterator = set.iterator();
-//		
+//
 //		while(namesIterator.hasNext()) {
-//			   System.out.println(namesIterator.next());
+//			   System.out.print(namesIterator.next());
 //			}
 		
-		//set.stream().forEach(System.out::println);
+//		set.stream().forEach(System.out::print);
+
+		//2. approch
+
+		Map<Character, Integer> map= new HashMap<>();
+
+		char[] chars = str.toCharArray();
+
+		for(Character ch:chars)
+		{
+			if(map.containsKey(ch))
+			{
+				map.put(ch, map.get(ch)+1);
+			}
+			else {
+				map.put(ch, 1);
+			}
+
+		}
+
+		Set<Character> keys = map.keySet();
+
+		for(Character ch1:keys){
+			if(map.get(ch1) > 1){
+				System.out.println("Char "+ch1+" "+map.get(ch1));
+			}
+		}
+
 
 	}
-
-// Using Hashmap
-
-//	
-//	Map<Character, Integer> map= new HashMap<>();
-//	
-//	char[] chars = str1.toCharArray();
-//	
-//	for(Character ch:chars)
-//	  {
-//		if(map.containsKey(ch))
-//		{
-//			map.put(ch, map.get(ch)+1);
-//		}
-//		else {
-//			map.put(ch, 1);
-//		}
-//		
-//	  }
-//	
-//	Set<Character> keys = map.keySet();
-//	
-//	for(Character ch1:keys){
-//	      if(map.get(ch1) > 1){
-//	        System.out.println("Char "+ch1+" "+map.get(ch1));
-//	      }
-//	    }
-//
-//}
 }
