@@ -4,6 +4,7 @@ public class ReverseStringWithoutChangePosition {
     {
         String str="I love java programming";
         String words[] =str.split(" ");
+        //str.replaceAll("//s","");= remove white space
         String reverseString="";
 
         for(int i=0;i< words.length;i++)

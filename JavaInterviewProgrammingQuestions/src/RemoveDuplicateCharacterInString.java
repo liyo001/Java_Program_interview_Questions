@@ -22,12 +22,10 @@ public class RemoveDuplicateCharacterInString {
 		String mrt = "Java bast bast learning Java website Point";
 
 		String[] dr = mrt.split(" ");
-
 		String newStr1 = new String();
-
 		for (int k = 0; k < dr.length; k++)
-
 		{
+
 			if (newStr1.indexOf(dr[k]) < 0) {
 				newStr1 = newStr1 +" "+ dr[k];
 			}

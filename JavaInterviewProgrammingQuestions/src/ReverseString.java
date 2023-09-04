@@ -4,7 +4,7 @@ public class ReverseString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String str = "Tarun";
+		String str = "Aparna";
 
 		String rvs = "";
 		char[] ch = str.toCharArray();

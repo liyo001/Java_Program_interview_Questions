@@ -15,26 +15,23 @@ public class StringArrayOrderChange {
 		String temp;
 
 		for (int i = 0; i < size; i++) {
-			for (int j = i + 1; j < size; j++)
+			for (int j = 0; j < size-1; j++)
 
 			{
-
-				if (countries[i].compareTo(countries[j]) > 0)
-
+				if (countries[j].compareTo(countries[j+1]) > 0)
 				{
-					temp = countries[i];
-					countries[i] = countries[j];
-					countries[j] = temp;
-
+					temp = countries[j];
+					countries[j] = countries[j+1];
+					countries[j+1] = temp;
 				}
 
 			}
 		}
 
-		System.out.print(Arrays.toString(countries));
-
-
-		Object[] at=Arrays.asList(countries).stream().sorted(Comparator.reverseOrder()).toArray();
+		System.out.println(Arrays.toString(countries));
+//
+//
+		Object[] at=Arrays.asList(countries).stream().sorted().toArray();
 
 		System.out.print(Arrays.toString(at));
 	}
